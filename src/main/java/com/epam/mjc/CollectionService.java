@@ -31,7 +31,6 @@ public class CollectionService {
 
     public Integer sum(List<Integer> list) {
         return list.stream()
-                .reduce(Integer::sum)
-                .get();
+                .reduce(0, Integer::sum);
     }
 }
